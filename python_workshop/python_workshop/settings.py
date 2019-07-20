@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
     'food_review',
+    'register',
 ]
 
 MIDDLEWARE = [
@@ -120,4 +122,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+#crispy form tag settings
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+# After login button click, go to the url
 LOGIN_REDIRECT_URL = '/'
