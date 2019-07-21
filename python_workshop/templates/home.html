@@ -6,14 +6,92 @@
   <p>Resize the browser window to see the effect.</p>
   <p>The columns will automatically stack on top of each other when the screen is less than 576px wide.</p>
   <div class="row">
-    <div class="col-sm-12" style="background-color:lavender;">{{restaurant.name}}
-    <div>
-<div data-qa="merchant-card-wrapper" class="sc-13c4kji-0 jRZJGl"><div data-qa="merchant-card" class="sc-13c4kji-1 hUbfgf"><div class="sc-13c4kji-2 dDrZac">
-<img alt="Meat-Me Steakhouse" src="https://qul.imgix.net/45e47e41-40c8-4f08-809f-9dfe77b482ee/465032_sld.jpg?auto=format&amp;w=210&amp;h=140&amp;fit=crop&amp;ch=Viewport-Width%2CWidth%2CDPR" srcset="https://qul.imgix.net/45e47e41-40c8-4f08-809f-9dfe77b482ee/465032_sld.jpg?auto=format&amp;w=210&amp;h=140&amp;fit=crop 1x, https://qul.imgix.net/45e47e41-40c8-4f08-809f-9dfe77b482ee/465032_sld.jpg?auto=format&amp;w=210&amp;h=140&amp;fit=crop&amp;dpr=2 2x, https://qul.imgix.net/45e47e41-40c8-4f08-809f-9dfe77b482ee/465032_sld.jpg?auto=format&amp;w=210&amp;h=140&amp;fit=crop&amp;dpr=3 3x," role="presentation"></div><div data-qa="content" class="sc-13c4kji-3 HGwQS"><div class="sc-13c4kji-4 ibacG">
-<div class="sc-13c4kji-9 eGmahV"><span class="b00vdf-0 cDopia"><span>New</span></span><h3 data-qa="merchant-name" class="sc-13c4kji-10 gsUnDa">Meat-Me Steakhouse</h3></div><div class="sc-13c4kji-5 hCNqAI"><span data-qa="merchant-location" class="sc-13c4kji-6 TbfMn">Dempsey</span><div class="sc-13c4kji-7 bCADyG"><span data-qa="merchant-card-cuisine" class="sc-13c4kji-8 jJvZTG">Steak</span><span display="block" width="3px" height="3px" class="sc-1lbf133-0 YJHXO"></span><div display="inline-block" class="sc-EHOje kinWmX"><p class="sc-bxivhb jgZlVE" font-style="normal" font-weight="regular" color="text.default" font-size="mobile.body.md,mobile.body.md,mobile.body.md,desktop.body.md" data-qa="merchant-price-range"><span class="sc-1g48u2f-0 gvdZlJ">$</span><span class="sc-1g48u2f-0 gvdZlJ">$</span><span class="sc-1g48u2f-0 eFYYDg">$</span><span class="sc-1g48u2f-0 eFYYDg">$</span></p></div></div></div></div></div><a href="/place/meat-me-steakhouse-56385" class="sc-13c4kji-11 bgoLCB">Meat-Me Steakhouse</a></div></div></div>
+
     
-    </div>
-    <div class="col-sm-6" style="background-color:lavenderblush;">{{restaurant}}</div>
+    {% for obj in objectList%}
+    {{loop.index}}
+
+    <div class="panel panel-primary" style="border-color:black;background-color:#FAD9B7 "> 
+        <div class="row">
+          <div class="col-lg-12"> 
+
+            <!--For the image-->
+            {% comment %} <div class="col-lg-2">
+              <br/>
+              <img src="C:\Users\Lynn Lynn Oo\Desktop\veganburg.jpg" border="" alt="MCDONALD" style="border-color: black;width:100px;height:100px">
+               <br/> 
+              <br/> 
+            </div> {% endcomment %}
+
+            <div class="col-lg-10" style="font-family: times, serif; font-size:14pt; font-style:italic">
+              <br/>
+              <div class="col-md-12">
+                  <p><span class="fa fa-store"></span> &emsp; {{obj.name}}</p>           
+              </div>
+            </div>
+           
+            <div class="col-lg-10" style="font-family: times, serif; font-size:14pt; font-style:italic">
+              <div class="col-md-12">
+                 <p><span class="fa fa-map-marker"></span> &emsp; {{obj.adddress}}</p>            
+              </div>
+            </div>
+
+             <div class="col-lg-10" style="font-family: times, serif; font-size:14pt; font-style:italic">
+              <div class="col-md-12">
+                   <p><span class="fa fa-clock"></span> &emsp; Open 24 hours </p>      
+              </div>
+              <br/>
+            </div>
+
+           
+          </div>
+           <br/>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+     {% comment %} {% if t/2==0 %}  {% endcomment %}
+     <div class="col-sm-12" style="background-color:lavender;">
+      {{obj.id}}<br>
+      {{obj.name}}<br>
+      {{obj.address}}
+     </div>
+{% comment %} 
+     <div class="col-sm-12" style="background-color:lavenderblush;">
+      {{obj.id}}
+      {{obj.name}}<br>
+      {{obj.address}}
+     </div> {% endcomment %}
+
+        
+    {% endfor %}
+
     <div class="col-sm-12" style="background-color:lavender;">.col-sm-3</div>
     <div class="col-sm-12" style="background-color:lavenderblush;">.col-sm-3</div>
   </div>

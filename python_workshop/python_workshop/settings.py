@@ -125,5 +125,6 @@ STATIC_URL = '/static/'
 #crispy form tag settings
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
-# After login button click, go to the url
+# After login and logout button click, go to the url
 LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
